@@ -1,0 +1,35 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pkc="http://pkCards/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <pkc:GetCardIdRequest>
+         <CardType>300</CardType>
+         <CardNum>2058949448</CardNum>
+      </pkc:GetCardIdRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+Responce - OK:
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <ns2:GetCardIdRequestResponse xmlns:ns2="http://pkCards/">
+         <Barcode>3200589494482</Barcode>
+         <Result>
+            <Code>1</Code>
+         </Result>
+      </ns2:GetCardIdRequestResponse>
+   </soap:Body>
+</soap:Envelope>
+
+Responce - Error:
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <ns2:GetCardIdRequestResponse xmlns:ns2="http://pkCards/">
+         <Barcode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+         <Result>
+            <Code>-2</Code>
+         </Result>
+      </ns2:GetCardIdRequestResponse>
+   </soap:Body>
+</soap:Envelope>

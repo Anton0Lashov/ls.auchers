@@ -1,0 +1,8 @@
+(reply){
+   ClientReg = 992000000055282063
+   IndividualMessList = ""
+   Result = 
+      (Result){
+         Code = 1
+      }
+ }
